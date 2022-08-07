@@ -17,7 +17,7 @@ class Customer(models.Model):
     identity = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=50)
     balance = models.DecimalField(max_digits=6, decimal_places=2)
-    photo = models.ImageField(upload_to=customer_photo_directory, null=True)
+
 
     def __str__(self):
         return '{0} ({1})'.format(self.identity, self.name)
